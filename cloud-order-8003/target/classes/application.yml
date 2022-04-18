@@ -1,0 +1,53 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: cloud-order-service
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/store
+    username: root
+    password: evivv
+    driver-class-name: com.mysql.cj.jdbc.Driver  #MySQL8.0后
+
+    druid:
+      aop-patterns: com.atguigu.admin.*  #监控SpringBean
+      filters: stat,wall     # 底层开启功能，stat（sql监控），wall（防火墙）
+
+      stat-view-servlet: # 配置监控页功能
+        enabled: true
+        login-username: admin
+        login-password: admin
+        resetEnable: false
+
+      web-stat-filter: # 监控web
+        enabled: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+
+      filter:
+        stat: # 对上面filters里面的stat的详细配置
+          slow-sql-millis: 1000
+          logSlowSql: true
+          enabled: true
+        wall:
+          enabled: true
+          config:
+            drop-table-allow: false
+
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #sql信息
+  global-config:
+    db-config:
+      table-prefix: t_  # 设置实体类所对应的表的前缀
+      id-type: auto # 设置全局自增策略
+
+userinfo:
+  address:
+    maxCount: 20
