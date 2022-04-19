@@ -40,6 +40,13 @@ public interface IAddressService extends IService<Address> {
     void setDefault(Integer aid, Integer uid, String username);
 
     /**
+     * 获取默认收货地址
+     * @param uid 归属的用户id
+     * @param username 当前登录的用户名
+     */
+    Address getDefault(Integer uid);
+
+    /**
      * 删除收货地址
      * @param aid 收货地址id
      * @param uid 归属的用户id

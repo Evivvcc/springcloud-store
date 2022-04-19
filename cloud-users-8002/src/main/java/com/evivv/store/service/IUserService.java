@@ -37,15 +37,14 @@ public interface IUserService extends IService<User> {
      * @param uid 当前登录的用户的id
      * @return 当前登录的用户的信息
      */
-    User getByUid(Integer uid);
+//    User getByUid(Integer uid);
 
     /**
      * 修改用户资料
      * @param uid 当前登录的用户的id
-     * @param username 当前登录的用户名
      * @param user 用户的新的数据
      */
-    void changeInfo(Integer uid, String username, User user);
+    void changeInfo(Integer uid, User user);
 
 
 

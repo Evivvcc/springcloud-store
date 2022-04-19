@@ -30,7 +30,7 @@ public class BaseController {
             result.setMessage("用户密码错误");
         } else if (e instanceof UpdateException) {
             result.setState(5001);
-            result.setMessage("更新错误");
+            result.setMessage("用户信息更新失败");
         } else if (e instanceof AddressCountLimitException) {
             result.setState(4003);
             result.setMessage("地址数量达到上限制");

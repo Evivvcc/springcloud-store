@@ -16,7 +16,7 @@ public class DistrictController extends BaseController {
     @Autowired
     private IDistrictService districtService;
 
-    @GetMapping("/")
+    @GetMapping("districts")
     public JsonResult<List<District>> getByParent(String parent) {
         List<District> data = districtService.getByParent(parent);
         return new JsonResult<>(OK, data);

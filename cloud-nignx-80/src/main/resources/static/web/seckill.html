@@ -304,6 +304,9 @@
 					url: "http://localhost:10010/products/" + id + "/details",
 					type: "GET",
 					dataType: "JSON",
+					xhrFields:{
+						withCredentials: true
+					},
 					success: function(json) {
 						if (json.state == 200) {
 							console.log("title=" + json.data.title);
@@ -332,6 +335,9 @@
 					},
 					type: "POST",
 					dataType: "JSON",
+					xhrFields:{
+						withCredentials: true
+					},
 					success: function(json) {
 						if (json.state == 200) {
 							alert("抢购成功！");

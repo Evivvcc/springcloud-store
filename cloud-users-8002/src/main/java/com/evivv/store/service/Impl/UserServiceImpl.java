@@ -137,33 +137,32 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
     }
 
+//    @Override
+//    public User getCurrentUser(User user) {
+//        // 根据参数uid查询用户数据,判断查询结果是否为null
+//        // 是：抛出UserNotFoundException异常
+////        User result = getById(uid);
+////        if (result == null) {
+////            throw new UserNotFoundException("用户名不存在");
+////        }
+//
+//        // 判断查询结果中的isDelete是否为1
+//        // 是：抛出UserNotFoundException异常
+//
+//
+//        // 创建新的User对象
+//        // 将以上查询结果中的username/phone/email/gender封装到新User对象中
+//        user.setUsername(user.getUsername());
+//        user.setPhone(user.getPhone());
+//        user.setEmail(user.getEmail());
+//        user.setGender(user.getGender());
+//
+//        // 返回新的User对象
+//        return user;
+//    }
+
     @Override
-    public User getByUid(Integer uid) {
-        // 根据参数uid查询用户数据,判断查询结果是否为null
-        // 是：抛出UserNotFoundException异常
-        User result = getById(uid);
-        if (result == null) {
-            throw new UserNotFoundException("用户名不存在");
-        }
-
-        // 判断查询结果中的isDelete是否为1
-        // 是：抛出UserNotFoundException异常
-
-
-        // 创建新的User对象
-        // 将以上查询结果中的username/phone/email/gender封装到新User对象中
-        User user = new User();
-        user.setUsername(result.getUsername());
-        user.setPhone(result.getPhone());
-        user.setEmail(result.getEmail());
-        user.setGender(result.getGender());
-
-        // 返回新的User对象
-        return user;
-    }
-
-    @Override
-    public void changeInfo(Integer uid, String username, User user) {
+    public void changeInfo(Integer uid, User user) {
         // 根据参数uid查询用户数据,判断查询结果是否为null
         // 是：抛出UserNotFoundException异常
         User result = getById(uid);
@@ -180,11 +179,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         // 调用userMapper的updateInfoByUid(User user)方法执行修改，并获取返回值
         // 判断以上返回的受影响行数是否不为1
         // 是：抛出UpdateException异常
-        user.setModifiedUser(username);
+        user.setModifiedUser(result.getUsername());
         user.setModifiedTime(new Date());
         user.setUid(result.getUid());
         if (!update(user, new UpdateWrapper<User>().eq("uid",uid))) {
-            throw new UpdateException("更新失败");
+            throw new UpdateException("用户信息更新失败");
         }
     }
 

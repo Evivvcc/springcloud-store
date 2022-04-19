@@ -147,6 +147,7 @@
 <script type="text/javascript">
     $("#btn-login").click(function() {
         $.ajax({
+            withCredentials: true,
             url: "http://localhost:10010/users/login",
             type: "POST",
             data: $("#form-login").serialize(),

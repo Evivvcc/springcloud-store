@@ -301,6 +301,7 @@
 			console.log("id=" + id);
 			$(document).ready(function() {
 				$.ajax({
+					withCredentials: true,
 					url: "http://localhost:10010/products/" + id + "/details",
 					type: "GET",
 					dataType: "JSON",
@@ -327,6 +328,7 @@
 
 			$("#btn-add-to-cart").click(function() {
 				$.ajax({
+					withCredentials: true,
 					url: "/carts/add_to_cart",
 					type: "POST",
 					data: {
@@ -350,6 +352,7 @@
 
 			$("#btn-buy").click(function() {
 				$.ajax({
+					withCredentials: true,
 					url: "/carts/add_to_cart",
 					type: "POST",
 					data: {

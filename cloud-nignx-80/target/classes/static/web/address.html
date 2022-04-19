@@ -277,9 +277,12 @@
 			function showAddressList() {
 				$("#address-list").empty();
 				$.ajax({
-					url: "http://localhost:10010/users/get_addresses",
+					url: "http://localhost:10010/users/addresses/get_addresses",
 					type: "GET",
 					dataType: "JSON",
+					xhrFields:{
+						withCredentials: true
+					},
 					success: function (json) {
 						let list = json.data;
 						for (let i = 0; i < list.length; i++) {
@@ -312,9 +315,12 @@
 
 			function setDefault(aid) {
 				$.ajax({
-					url: "/addresses/" + aid + "/set_default",
+					url: "http://localhost:10010/users/addresses/" + aid + "/set_default",
 					type: "POST",
 					dataType: "JSON",
+					xhrFields:{
+						withCredentials: true
+					},
 					success: function(json) {
 						if (json.state == 200) {
 							showAddressList();

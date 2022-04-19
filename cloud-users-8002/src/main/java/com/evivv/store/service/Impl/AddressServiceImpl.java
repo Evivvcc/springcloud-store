@@ -156,6 +156,10 @@ public class AddressServiceImpl extends ServiceImpl<AddressMapper, Address> impl
 
     }
 
+    @Override
+    public Address getDefault(Integer uid) {
+        return getOne(new QueryWrapper<Address>().eq("uid", uid).eq("is_default", 1));
+    }
 
     @Override
     public void delete(Integer aid, Integer uid, String username) {
@@ -172,7 +176,7 @@ public class AddressServiceImpl extends ServiceImpl<AddressMapper, Address> impl
         if (result.getIsDefault() == null) {
             return;
         }
-        if (count(new QueryWrapper<Address>().eq("uid",uid)) == 0) {
+        if (count(new QueryWrapper<Address>().eq("uid", uid)) == 0) {
             return;
         }
         Page<Address> lastModified = page(new Page<Address>(0, 1), new QueryWrapper<Address>().orderByDesc("modified_time"));
