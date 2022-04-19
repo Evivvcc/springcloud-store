@@ -29,8 +29,8 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     }
 
     @Override
-    public Product getById(Integer id) {
-        Product result = super.getById(id);
+    public Product getById(Integer pid) {
+        Product result = super.getById(pid);
         if (result == null) {
             throw new ProductNotFoundException("尝试访问的商品数据不存在");
         }

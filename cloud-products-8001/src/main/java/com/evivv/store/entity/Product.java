@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class Product extends BaseEntity implements Serializable {
     @TableId
-    private Integer id; // '商品id'
+    private Integer pid; // '商品id'
     private Integer categoryId; //'分类id'
     private String itemType; //'商品系列'
     private String title; //'商品标题'

@@ -297,12 +297,11 @@
 		<!--页脚结束-->
 		<script type="text/javascript" src="../js/jquery-getUrlParam.js"></script>
 		<script type="text/javascript">
-			let id = $.getUrlParam("id");
-			console.log("id=" + id);
+			let pid = $.getUrlParam("pid");
 			$(document).ready(function() {
 				$.ajax({
 					withCredentials: true,
-					url: "http://localhost:10010/products/" + id + "/details",
+					url: "http://localhost:10010/products/" + pid + "/details",
 					type: "GET",
 					dataType: "JSON",
 					success: function(json) {

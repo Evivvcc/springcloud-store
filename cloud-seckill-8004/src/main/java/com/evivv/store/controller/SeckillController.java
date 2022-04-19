@@ -1,34 +1,30 @@
 package com.evivv.store.controller;
 
 import com.evivv.store.entity.SeckillOrder;
+import com.evivv.store.entity.User;
 import com.evivv.store.service.ISeckillService;
 import com.evivv.store.util.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("seckill")
 public class SeckillController extends BaseController {
 
     @Autowired
-    ISeckillService seckillService;
-//    @Autowired
-//    IAddressService addressService;
+    private ISeckillService seckillService;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
-//    @RequestMapping("create")
-//    public JsonResult<SeckillOrder> create(Integer aid, Integer pid, HttpSession session) {
-//        // 从Session中取出uid和username
-//        Integer uid = (Integer) session.getAttribute("uid");
-//        String username = (String) session.getAttribute("username");
-//
-//        Address address = addressService.getOne(new QueryWrapper<Address>().eq("uid", uid).eq("is_default", 1));
-//
-//        SeckillOrder data = seckillService.createSeckill(address.getAid(), pid, uid, username);
-//        return new JsonResult<SeckillOrder>(OK, data);
-//
-//
-//    }
+
+    @RequestMapping("create")
+    public JsonResult<SeckillOrder> create(Integer pid, @CookieValue("userTicket") String ticket) {
+        User user = (User) redisTemplate.opsForValue().get("user:" + ticket);
+        SeckillOrder data = seckillService.createSeckill(pid, user.getUid(), user.getUsername(), ticket);
+        return new JsonResult<SeckillOrder>(OK, data);
+    }
 }

@@ -137,29 +137,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
     }
 
-//    @Override
-//    public User getCurrentUser(User user) {
-//        // 根据参数uid查询用户数据,判断查询结果是否为null
-//        // 是：抛出UserNotFoundException异常
-////        User result = getById(uid);
-////        if (result == null) {
-////            throw new UserNotFoundException("用户名不存在");
-////        }
-//
-//        // 判断查询结果中的isDelete是否为1
-//        // 是：抛出UserNotFoundException异常
-//
-//
-//        // 创建新的User对象
-//        // 将以上查询结果中的username/phone/email/gender封装到新User对象中
-//        user.setUsername(user.getUsername());
-//        user.setPhone(user.getPhone());
-//        user.setEmail(user.getEmail());
-//        user.setGender(user.getGender());
-//
-//        // 返回新的User对象
-//        return user;
-//    }
 
     @Override
     public void changeInfo(Integer uid, User user) {

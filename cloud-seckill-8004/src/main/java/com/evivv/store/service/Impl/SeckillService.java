@@ -12,9 +12,12 @@ import com.evivv.store.service.ISeckillService;
 import com.evivv.store.service.ex.DuplicateSeckillException;
 import com.evivv.store.service.ex.InsertException;
 import com.evivv.store.service.ex.ProductNotEnoughException;
+import com.evivv.store.util.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 @Service
@@ -27,12 +30,13 @@ public class SeckillService extends ServiceImpl<SeckillMapper, SeckillOrder> imp
     @Autowired
     private ProductsClient productsClient;
 
-    @Override
-    public SeckillOrder createSeckill(Integer aid, Integer pid, Integer uid, String username) {
 
+    @Override
+    public SeckillOrder createSeckill(Integer pid, Integer uid, String username, String ticket) {
 
         // 查询库存
-        Product product = productsClient.getById(pid);
+        JsonResult<Product> result = productsClient.getById(pid);
+        Product product = result.getData();
         if (product.getNum() == 0) {
             throw new ProductNotEnoughException("库存不足");
         }
@@ -42,7 +46,8 @@ public class SeckillService extends ServiceImpl<SeckillMapper, SeckillOrder> imp
             throw new DuplicateSeckillException("重复抢购");
         }
         // 查询地址
-        Address address = userClient.getDefaultAddress();
+        JsonResult<Address> result1 = userClient.getDefaultAddress("userTicket=" + ticket);
+        Address address = result1.getData();
         // 生成订单
         SeckillOrder seckillOrder = new SeckillOrder();
         seckillOrder.setUid(uid);

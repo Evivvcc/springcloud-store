@@ -297,11 +297,11 @@
 		<!--页脚结束-->
 		<script type="text/javascript" src="../js/jquery-getUrlParam.js"></script>
 		<script type="text/javascript">
-			let id = $.getUrlParam("id");
-			console.log("id=" + id);
+			let pid = $.getUrlParam("pid");
+			// console.log("pid=" + pid);
 			$(document).ready(function() {
 				$.ajax({
-					url: "http://localhost:10010/products/" + id + "/details",
+					url: "http://localhost:10010/products/" + pid + "/details",
 					type: "GET",
 					dataType: "JSON",
 					xhrFields:{
@@ -329,9 +329,9 @@
 
 			$("#btn-create-to-seckill").click(function() {
 				$.ajax({
-					url: "/seckill/create",
+					url: "http://localhost:10010/seckill/create",
 					data: {
-						"pid": id
+						"pid": pid
 					},
 					type: "POST",
 					dataType: "JSON",
@@ -348,8 +348,8 @@
 						}
 					},
 					error: function(xhr) {
-						alert("您的登录信息已经过期，请重新登录！HTTP响应码：" + xhr.status);
-						location.href = "login.html";
+						alert("抢购时发生未知的异常：" + xhr.status);
+						// location.href = "login.html";
 					}
 				});
 			});

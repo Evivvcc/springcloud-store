@@ -311,12 +311,12 @@
 						for (let i = 0; i < list.length; i++) {
 							console.log(list[i].title);
 							let html = '<div class="col-md-12">'
-									+ '<div class="col-md-7 text-row-2"><a href="seckill.html?id=#{id}">#{title}</a></div>'
+									+ '<div class="col-md-7 text-row-2"><a href="seckill.html?pid=#{pid}">#{title}</a></div>'
 									+ '<div class="col-md-2">¥#{price}</div>'
 									+ '<div class="col-md-3"><img src="..#{image}collect.png" class="img-responsive" /></div>'
 									+ '</div>';
 
-							html = html.replace(/#{id}/g, list[i].id);
+							html = html.replace(/#{pid}/g, list[i].pid);
 							html = html.replace(/#{title}/g, list[i].title);
 							html = html.replace(/#{price}/g, list[i].price);
 							html = html.replace(/#{image}/g, list[i].image);
@@ -344,12 +344,12 @@
 						for (let i = 0; i < list.length; i++) {
 							console.log(list[i].title);
 							let html = '<div class="col-md-12">'
-									+ '<div class="col-md-7 text-row-2"><a href="product.html?id=#{id}">#{title}</a></div>'
+									+ '<div class="col-md-7 text-row-2"><a href="product.html?pid=#{pid}">#{title}</a></div>'
 									+ '<div class="col-md-2">¥#{price}</div>'
 									+ '<div class="col-md-3"><img src="..#{image}collect.png" class="img-responsive" /></div>'
 									+ '</div>';
 
-							html = html.replace(/#{id}/g, list[i].id);
+							html = html.replace(/#{pid}/g, list[i].pid);
 							html = html.replace(/#{title}/g, list[i].title);
 							html = html.replace(/#{price}/g, list[i].price);
 							html = html.replace(/#{image}/g, list[i].image);
