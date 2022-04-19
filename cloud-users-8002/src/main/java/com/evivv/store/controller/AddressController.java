@@ -4,13 +4,10 @@ import com.evivv.store.entity.Address;
 import com.evivv.store.entity.User;
 import com.evivv.store.service.IAddressService;
 import com.evivv.store.util.JsonResult;
-import org.checkerframework.checker.units.qual.K;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
-import java.time.OffsetDateTime;
 import java.util.List;
 
 @RestController

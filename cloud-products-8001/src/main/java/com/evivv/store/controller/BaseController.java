@@ -1,7 +1,9 @@
 package com.evivv.store.controller;
 
+import com.evivv.store.service.ex.ProductNotEnoughException;
 import com.evivv.store.service.ex.ProductNotFoundException;
 import com.evivv.store.service.ex.ServiceException;
+import com.evivv.store.service.ex.UpdateException;
 import com.evivv.store.util.JsonResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -20,6 +22,12 @@ public class BaseController {
         if (e instanceof ProductNotFoundException){
             result.setState(4000);
             result.setMessage("尝试访问的商品数据不存在");
+        } else if (e instanceof ProductNotEnoughException) {
+            result.setState(4001);
+            result.setMessage("商品库存不足");
+        } else if (e instanceof UpdateException) {
+            result.setState(4002);
+            result.setMessage("库存更新失败");
         }
         return result;
     }

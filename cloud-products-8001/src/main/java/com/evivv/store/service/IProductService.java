@@ -25,4 +25,12 @@ public interface IProductService extends IService<Product> {
      * @return 热销商品前四名的集合
      */
     List<Product> getSeckillList();
+
+    /**
+     * 更新库存
+     * @param pid 商品id
+     * @param num 更新数量
+     * @return
+     */
+    void updateInventory(Integer pid, Integer num);
 }

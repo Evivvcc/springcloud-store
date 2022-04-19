@@ -34,6 +34,17 @@ public class ProductController extends BaseController {
         return new JsonResult<List<Product>>(OK, productService.getSeckillList());
     }
 
+    /**
+     * 更新库存
+     * @param pid 商品id
+     * @param num 更新数量
+     * @return
+     */
+    @RequestMapping("update_inventory")
+    public JsonResult<Void> updateInventory(Integer pid, Integer num) {
+        productService.updateInventory(pid, num);
+        return new JsonResult<>(OK);
+    }
 
     /**
      * -------------------- util --------------------

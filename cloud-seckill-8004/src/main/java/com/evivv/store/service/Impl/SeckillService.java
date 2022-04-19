@@ -31,6 +31,14 @@ public class SeckillService extends ServiceImpl<SeckillMapper, SeckillOrder> imp
     private ProductsClient productsClient;
 
 
+
+    /**
+     * 创建秒杀订单
+     * @param pid 秒杀的商品数据在秒杀商品表中的id
+     * @param uid 当前登录的用户的id
+     * @param ticket 当前登录的用户的cookie
+     * @return 成功创建的订单数据
+     */
     @Override
     public SeckillOrder createSeckill(Integer pid, Integer uid, String username, String ticket) {
 
@@ -71,8 +79,55 @@ public class SeckillService extends ServiceImpl<SeckillMapper, SeckillOrder> imp
             throw new InsertException("订单插入失败");
         }
 
+        // 更新库存
+        productsClient.updateInventory(pid, 1);
+
+
         return seckillOrder;
     }
 
+
+
+
+    /**
+     * 秒杀压力测试接口
+     * @param pid 秒杀的商品数据在秒杀商品表中的id
+     * @param username 用户名称
+     * @return 成功创建的订单数据
+     */
+    @Override
+    public SeckillOrder seckillTest(Integer pid,String username) {
+
+        // 查询库存
+        JsonResult<Product> result = productsClient.getById(pid);
+        Product product = result.getData();
+        if (product.getNum() == 0) {
+            throw new ProductNotEnoughException("库存不足");
+        }
+        // 查询秒杀订单
+        SeckillOrder one = getOne(new QueryWrapper<SeckillOrder>().eq("created_user", username).eq("pid", pid));
+        if (one != null) {
+            throw new DuplicateSeckillException("重复抢购");
+        }
+        // 生成订单
+        SeckillOrder seckillOrder = new SeckillOrder();
+        Date now = new Date();
+        seckillOrder.setUid(1);
+        seckillOrder.setPid(pid);
+        seckillOrder.setRecvName(username);
+        seckillOrder.setOrderTime(now);
+        seckillOrder.setCreatedUser(username);
+        seckillOrder.setCreatedTime(now);
+        seckillOrder.setModifiedUser(username);
+        seckillOrder.setModifiedTime(now);
+
+        if (!save(seckillOrder)) {
+            throw new InsertException("订单插入失败");
+        }
+
+        productsClient.updateInventory(pid, 1);
+
+        return seckillOrder;
+    }
 
 }

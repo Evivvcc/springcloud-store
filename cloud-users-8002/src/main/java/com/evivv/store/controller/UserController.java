@@ -5,14 +5,12 @@ import com.evivv.store.service.IUserService;
 import com.evivv.store.util.CookieUtil;
 import com.evivv.store.util.JsonResult;
 import com.evivv.store.util.UUIDUtil;
+import org.apache.catalina.realm.UserDatabaseRealm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sun.security.krb5.internal.Ticket;
 
 import javax.servlet.http.Cookie;
@@ -105,4 +103,16 @@ public class UserController extends BaseController {
         return user;
     }
 
+
+    /**
+     * 测试用接口
+     */
+    @GetMapping("/hello")
+    public String hello(Integer pid, String username) {
+        return pid  + ": " + username;
+    }
+    @GetMapping("userinfo")
+    public String hello( @CookieValue("userTicket") String ticket) {
+        return ticket;
+    }
 }

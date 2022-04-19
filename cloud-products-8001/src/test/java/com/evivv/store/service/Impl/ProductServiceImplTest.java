@@ -1,22 +1,18 @@
-package com.evivv.store.clients;
+package com.evivv.store.service.Impl;
 
-import com.evivv.store.entity.Product;
+import com.evivv.store.service.IProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
-class ProductsClientTest {
+class ProductServiceImplTest {
     @Autowired
-    ProductsClient productsClient;
-    @Test
-    void getById() {
-
-    }
+    IProductService productService;
 
     @Test
     void updateInventory() {
-        productsClient.updateInventory(10000001, 1);
+        productService.updateInventory(10000001, 1);
     }
 }

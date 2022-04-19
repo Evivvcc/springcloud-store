@@ -16,29 +16,15 @@ public class BaseController {
     @ExceptionHandler(ServiceException.class) // 用于统一处理抛出的异常
     public JsonResult<Void> handleException(Throwable e) {
         JsonResult<Void> result = new JsonResult<>();
-        if (e instanceof UsernameDuplicateException){
+        if (e instanceof ProductNotEnoughException){
             result.setState(4000);
-            result.setMessage("用户名已经被占用");
-        } else if (e instanceof InsertException) {
-            result.setState(5000);
-            result.setMessage("注册时产生未知的异常");
-        } else if (e instanceof UserNotFoundException) {
+            result.setMessage("商品库存不足，秒杀失败");
+        } else if (e instanceof DuplicateSeckillException) {
             result.setState(4001);
-            result.setMessage("用户名不存在");
-        } else if (e instanceof PasswordNotMatchException) {
+            result.setMessage("已秒杀成功，不能重复秒杀");
+        } else if (e instanceof InsertException) {
             result.setState(4002);
-            result.setMessage("用户密码错误");
-        } else if (e instanceof UpdateException) {
-            result.setState(5001);
-            result.setMessage("用户信息更新失败");
-        } else if (e instanceof AddressCountLimitException) {
-            result.setState(4003);
-            result.setMessage("地址数量达到上限制");
-        } else if (e instanceof AccessDeniedException) {
-            result.setState(4008);
-            result.setMessage("非法访问");
-        } else if (e instanceof AddressNotFoundException) {
-            result.setState(4004);
+            result.setMessage("秒杀订单生成失败");
         }
         return result;
     }
