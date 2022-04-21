@@ -15,7 +15,7 @@ class SeckillServiceTest {
 
     @Test
     void createSeckill() {
-        JsonResult<Address> defaultAddress = userClient.getDefaultAddress("userTicket=fbde32fed358402eac7822a8c22d90c5");
+//        JsonResult<Address> defaultAddress = userClient.getDefaultAddress("userTicket=fbde32fed358402eac7822a8c22d90c5");
 
     }
 }

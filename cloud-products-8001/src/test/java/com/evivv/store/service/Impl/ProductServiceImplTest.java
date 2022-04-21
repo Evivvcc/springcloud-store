@@ -13,6 +13,8 @@ class ProductServiceImplTest {
 
     @Test
     void updateInventory() {
-        productService.updateInventory(10000001, 1);
+//        productService.updateInventory(10000001, 1);
+        productService.update().setSql("num = num - 1").eq("pid",10000001).update();
     }
+
 }

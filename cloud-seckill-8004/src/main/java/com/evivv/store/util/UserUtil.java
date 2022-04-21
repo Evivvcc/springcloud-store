@@ -27,7 +27,7 @@ import java.util.List;
 public class UserUtil {
 	private static void createUser(int count) throws Exception {
 
-		File file = new File("/Users/wuyi/jmeterTest.txt");
+		File file = new File("/Users/wuyi/jmeterTestSameUser.txt");
 		if (file.exists()) {
 			file.delete();
 		}
@@ -36,7 +36,7 @@ public class UserUtil {
 		raf.seek(0);
 		for (int i = 0; i < count; i++) {
 
-			String row = "user:" + i;
+			String row = "user:" + 1;
 			raf.seek(raf.length());
 			raf.write(row.getBytes());
 			raf.write("\r\n".getBytes());
@@ -44,7 +44,6 @@ public class UserUtil {
 		raf.close();
 		System.out.println("over");
 	}
-
 
 
 	public static void main(String[] args) throws Exception {

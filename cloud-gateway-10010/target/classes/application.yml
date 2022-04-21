@@ -14,10 +14,10 @@ spring:
           predicates: # 路由断言，也就是判断请求是否符合路由规则的条件
             - Path=/products/** # 这个是按照路径匹配，只要以/user/开头就符合要求
 
-        - id: users-service
-          uri: lb://cloud-users-service
+        - id: admin-service
+          uri: lb://cloud-admin-service
           predicates:
-            - Path=/users/**
+            - Path=/admin/**
 
         - id: order-service
           uri: lb://cloud-order-service

@@ -147,7 +147,7 @@
 							<div class="form-group">
 								<label class="col-md-2 control-label">电话号码：</label>
 								<div class="col-md-8">
-									<input `id="phone" name="phone" type="text" class="form-control" placeholder="请输入电话号码" value="13311311313">
+									<input id="phone" name="phone" type="text" class="form-control" placeholder="请输入电话号码" value="13311311313">
 								</div>
 							</div>
 							<div class="form-group">
@@ -271,7 +271,7 @@
 			 */
 			$(document).ready(function() {
 				$.ajax({
-					url: "http://localhost:10010/users/get_info",
+					url: "http://localhost:10010/admin/users/get_info",
 					type: "GET",
 					dataType: "json",
 					xhrFields:{
@@ -297,7 +297,7 @@
 
 			$("#btn-change-info").click(function() {
 				$.ajax({
-					url: "http://localhost:10010/users/change_info",
+					url: "http://localhost:10010/admin/users/change_info",
 					type: "POST",
 					data: $("#form-change-info").serialize(),
 					dataType: "json",

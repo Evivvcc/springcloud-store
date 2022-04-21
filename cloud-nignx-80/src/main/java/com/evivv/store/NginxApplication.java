@@ -8,5 +8,4 @@ public class NginxApplication {
     public static void main(String[] args) {
         SpringApplication.run(NginxApplication.class, args);
     }
-
 }

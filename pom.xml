@@ -10,13 +10,13 @@
   <!-- 管理的工程列表 -->
   <modules>
     <module>cloud-products-8001</module>
-    <module>cloud-users-8002</module>
-    <module>cloud-users-8002</module>
       <module>cloud-order-8003</module>
       <module>cloud-seckill-8004</module>
       <module>cloud-gateway-10010</module>
     <module>cloud-api-commons</module>
     <module>cloud-nignx-80</module>
+    <module>cloud-login-8005</module>
+    <module>cloud-admin-8002</module>
   </modules>
 
   <packaging>pom</packaging>
@@ -124,6 +124,12 @@
         <version>2.6.6</version>
       </dependency>
 
+      <!--json转换器-->
+      <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-xml</artifactId>
+        <version>2.13.2</version>
+      </dependency>
 
     </dependencies>
   </dependencyManagement>

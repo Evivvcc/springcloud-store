@@ -22,22 +22,11 @@ public class SeckillController extends BaseController {
 
 
     @RequestMapping("create")
-    public JsonResult<SeckillOrder> create(Integer pid, @CookieValue("userTicket") String ticket) {
+    public JsonResult<Long> create(Integer pid, @CookieValue("userTicket") String ticket) {
         User user = (User) redisTemplate.opsForValue().get("user:" + ticket);
-        SeckillOrder data = seckillService.createSeckill(pid, user.getUid(), user.getUsername(), ticket);
-        return new JsonResult<SeckillOrder>(OK, data);
+       Long orderId = seckillService.createSeckill(pid, user.getUid());
+        return new JsonResult<Long>(OK, orderId);
     }
 
 
-    /**
-     * 秒杀压力测试接口
-     * @param pid 秒杀的商品数据在秒杀商品表中的id
-     * @param username 用户名称
-     * @return 成功创建的订单数据
-     */
-    @RequestMapping("create_test")
-    public JsonResult<SeckillOrder> createTest(Integer pid, String username) {
-        SeckillOrder data = seckillService.seckillTest(pid, username);
-        return new JsonResult<SeckillOrder>(OK, data);
-    }
 }

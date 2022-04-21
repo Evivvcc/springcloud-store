@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient("cloud-products-service")
 public interface ProductsClient {
-    @GetMapping("/products/{pid}/details")
-    JsonResult<Product> getById(@PathVariable("pid") Integer pid);
+    @GetMapping("/products/getInfoById")
+    Product getInfoById(@RequestParam("pid") Integer pid);
 
 
     @RequestMapping("/products/update_inventory")
-    JsonResult<Void> updateInventory(@RequestParam("pid") Integer pid, @RequestParam("num") Integer num);
+    boolean updateInventory(@RequestParam("pid") Integer pid, @RequestParam("stock") Integer stock, @RequestParam("num") Integer num);
 }

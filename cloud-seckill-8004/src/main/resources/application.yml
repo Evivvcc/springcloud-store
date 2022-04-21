@@ -53,6 +53,27 @@ spring:
         max-idle: 8
         # 连接池中的最小空闲连接 默认 0
         min-idle: 0
+  rabbitmq:
+    host: 127.0.0.1 # 主机名
+    port: 5672 # 端口
+    virtual-host: / # 虚拟主机
+    username: guest # 用户名
+    password: guest # 密码
+    listener:
+      simple:
+        concurrency: 10 # 消费者最小数量
+        max-concurrency: 10 #消费者最大数量
+        prefetch: 1 # 限制消费者每次只预取一条消息
+        auto-startup: true #启动时是否默认启动容器
+        default-requeue-rejected: true # 被拒绝时是否进入队列
+    template:
+      retry:
+        enabled: true
+        initial-interval: 1000ms
+        max-attempts: 3
+        max-interval: 10000ms
+
+
 
 
 

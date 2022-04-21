@@ -12,26 +12,28 @@
         <module name="cloud-gateway-10010" />
         <module name="cloud-order-8003" />
         <module name="cloud-api-commons" />
+        <module name="cloud-admin-8002" />
         <module name="cloud-address-8005" />
         <module name="cloud-seckill-8004" />
-        <module name="cloud-users-8002" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="cloud-address-8005" target="8" />
+      <module name="cloud-login-8005" target="8" />
       <module name="clould-product-8001" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-address-8005" options="-parameters" />
+      <module name="cloud-admin-8002" options="-parameters" />
       <module name="cloud-api-commons" options="-parameters" />
       <module name="cloud-gateway-10010" options="-parameters" />
+      <module name="cloud-login-8005" options="-parameters" />
       <module name="cloud-nignx-80" options="-parameters" />
       <module name="cloud-order-8003" options="-parameters" />
       <module name="cloud-products-8001" options="-parameters" />
       <module name="cloud-seckill-8004" options="-parameters" />
-      <module name="cloud-users-8002" options="-parameters" />
     </option>
   </component>
 </project>

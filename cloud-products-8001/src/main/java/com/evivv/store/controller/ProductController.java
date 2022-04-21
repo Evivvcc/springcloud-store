@@ -4,11 +4,10 @@ package com.evivv.store.controller;
 import com.evivv.store.entity.Product;
 import com.evivv.store.service.IProductService;
 import com.evivv.store.util.JsonResult;
+import com.evivv.store.vo.ProductVO;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,29 +24,43 @@ public class ProductController extends BaseController {
     }
 
     @GetMapping("/{pid}/details")
-    public JsonResult<Product> findByid(@PathVariable("pid") Integer id) {
-        return new JsonResult<Product>(OK, productService.getById(id));
+    public JsonResult<ProductVO> findByid(@PathVariable("pid") Integer pid) throws JsonProcessingException {
+        return new JsonResult<ProductVO>(OK, productService.getInfoById(pid));
     }
 
     @GetMapping("/seckill_list")
     public JsonResult<List<Product>> getSeckillList() {
-        return new JsonResult<List<Product>>(OK, productService.getSeckillList());
+        List<Product> seckillList = productService.getSeckillList();
+        // 将秒杀商品信息添加进缓存
+        return new JsonResult<List<Product>>(OK, seckillList);
     }
 
     /**
      * 更新库存
-     * @param pid 商品id
-     * @param num 更新数量
-     * @return
+     *
+     * @param pid   商品的id
+     * @param stock 商品的库存
+     * @param num   下单的商品数量
      */
     @RequestMapping("update_inventory")
-    public JsonResult<Void> updateInventory(Integer pid, Integer num) {
-        productService.updateInventory(pid, num);
-        return new JsonResult<>(OK);
+    public boolean updateInventory(Integer pid, Integer stock, Integer num) {
+        return productService.updateInventory(pid, stock, num);
     }
 
+
+
     /**
-     * -------------------- util --------------------
+     * -------------------- 服务接口 --------------------
      */
 
+
+    /**
+     * 服务接口，根据pid提供商品信息
+     * @param pid  秒杀的商品数据在秒杀商品表中的id
+     * @return 成功创建的订单数据
+     */
+    @GetMapping("getInfoById")
+    public Product getInfoById(Integer pid) {
+        return productService.getById(pid);
+    }
 }

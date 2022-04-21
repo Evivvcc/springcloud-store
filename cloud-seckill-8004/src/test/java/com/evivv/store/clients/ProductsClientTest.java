@@ -17,6 +17,6 @@ class ProductsClientTest {
 
     @Test
     void updateInventory() {
-        productsClient.updateInventory(10000001, 1);
+        productsClient.updateInventory(10000001, 100, 1);
     }
 }

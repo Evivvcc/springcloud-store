@@ -148,10 +148,13 @@
     $("#btn-login").click(function() {
         $.ajax({
             withCredentials: true,
-            url: "http://localhost:10010/users/login",
+            url: "http://localhost:10010/admin/users/login",
             type: "POST",
             data: $("#form-login").serialize(),
             dataType: "json",
+            xhrFields:{
+                withCredentials: true
+            },
             success: function(json) {
                 if (json.state == 200) {
                     alert("登录成功！");
