@@ -5,140 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c36dc5-2bf3-4126-83d9-b109d06f02d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/evivv/store/util/RedisConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/vo/ProductVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/config/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/entity/SeckillMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/listener/SpringRabbitListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/util/RedisIdWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/util/jmeterTestSameUser.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/resources/seckill.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/test/java/com/evivv/store/service/Impl/SeckillServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/controller/SeckillProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/entity/SeckillProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/mapper/SeckillProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/service/ISeckillProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/service/Impl/SeckillProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/test/java/com/evivv/store/mapper/SeckillProductMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-products-8001/src/test/java/com/evivv/store/service/Impl/SeckillProductServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/entity/SeckillProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-admin-8002/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-admin-8002/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-gateway-10010/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway-10010/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-gateway-10010/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway-10010/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/java/com/evivv/store/NginxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/java/com/evivv/store/NginxApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/addAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/addAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/userdata.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/userdata.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/seckill.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/src/main/resources/static/web/seckill.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/addAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/addAddress.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/address.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-order-8003/target/classes/com/evivv/store/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-order-8003/target/classes/com/evivv/store/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-products-8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/userdata.html" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-nignx-80/target/classes/static/web/userdata.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-order-8003/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-order-8003/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/service/IProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/service/Impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/java/com/evivv/store/service/Impl/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-products-8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-products-8001/src/test/java/com/evivv/store/service/Impl/ProductServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/src/test/java/com/evivv/store/service/Impl/ProductServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-products-8001/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-products-8001/target/classes/com/evivv/store/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/target/classes/com/evivv/store/controller/ProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-products-8001/target/classes/com/evivv/store/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/target/classes/com/evivv/store/service/IProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-products-8001/target/classes/com/evivv/store/service/Impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-products-8001/target/classes/com/evivv/store/service/Impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/SeckillApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/SeckillApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/clients/ProductsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/clients/ProductsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/config/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/controller/SeckillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/controller/SeckillController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/service/ISeckillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/service/ISeckillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/service/Impl/SeckillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/service/Impl/SeckillServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/util/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/util/UserUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/service/Impl/SeckillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/service/Impl/SeckillServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/test/java/com/evivv/store/clients/ProductsClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/test/java/com/evivv/store/clients/ProductsClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/test/java/com/evivv/store/service/Impl/SeckillServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/test/java/com/evivv/store/service/Impl/SeckillServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/src/test/java/com/evivv/store/service/Impl/SeckillServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/src/test/java/com/evivv/store/service/Impl/SeckillServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/target/classes/com/evivv/store/controller/SeckillController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/target/classes/com/evivv/store/controller/SeckillController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/target/classes/com/evivv/store/service/ISeckillService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-seckill-8004/target/classes/com/evivv/store/service/ISeckillService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-seckill-8004/target/classes/com/evivv/store/service/Impl/SeckillService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/UsersApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/config/MyBatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/config/MyBatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/controller/DistrictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/controller/DistrictController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/entity/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/entity/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/entity/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/entity/District.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/mapper/AddressMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/mapper/AddressMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/mapper/DistrictMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/mapper/DistrictMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/IAddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/IAddressService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/IDistrictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/IDistrictService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/Impl/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/Impl/AddressServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/Impl/DistrictServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/Impl/DistrictServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/AccessDeniedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/AccessDeniedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/AddressCountLimitException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/AddressCountLimitException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/AddressNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/AddressNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/CartNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/CartNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/DeleteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/DeleteException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/DuplicateSeckillException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/DuplicateSeckillException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/InsertException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/InsertException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/OrderNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/OrderNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/PasswordNotMatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/PasswordNotMatchException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/ProductNotEnoughException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/ProductNotEnoughException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/ProductNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/ProductNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/ServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/ServiceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/UpdateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/UpdateException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/service/ex/UsernameDuplicateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/service/ex/UsernameDuplicateException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/util/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/util/CookieUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/java/com/evivv/store/util/UUIDUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/java/com/evivv/store/util/UUIDUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/src/test/java/com/evivv/store/service/Impl/AddressServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/src/test/java/com/evivv/store/service/Impl/AddressServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/UsersApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/config/MyBatisPlusConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/config/MyBatisPlusConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/config/RedisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/controller/AddressController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/controller/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/controller/DistrictController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/controller/DistrictController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/entity/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/entity/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/entity/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/entity/BaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/entity/District.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/entity/District.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/mapper/AddressMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/mapper/AddressMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/mapper/DistrictMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/mapper/DistrictMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/IAddressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/IAddressService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/IDistrictService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/IDistrictService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/Impl/AddressServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/Impl/AddressServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/Impl/DistrictServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/Impl/DistrictServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/AccessDeniedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/AccessDeniedException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/AddressCountLimitException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/AddressCountLimitException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/AddressNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/AddressNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/CartNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/CartNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/DeleteException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/DeleteException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/DuplicateSeckillException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/DuplicateSeckillException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/InsertException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/InsertException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/OrderNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/OrderNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/PasswordNotMatchException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/PasswordNotMatchException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/ProductNotEnoughException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/ProductNotEnoughException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/ProductNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/ProductNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/ServiceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/ServiceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/UpdateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/UpdateException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/UserNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/UserNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/service/ex/UsernameDuplicateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/service/ex/UsernameDuplicateException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/util/CookieUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/util/CookieUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-users-8002/target/classes/com/evivv/store/util/UUIDUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-admin-8002/target/classes/com/evivv/store/util/UUIDUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,8 +53,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -200,6 +104,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.evivv.store.service.Impl" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cloud-seckill-8004/src/main/resources" />
       <recent name="$PROJECT_DIR$/cloud-seckill-8004/src/main/java/com/evivv/store/util" />
@@ -218,13 +125,14 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.evivv.store.service.Impl" />
+      <recent name="com.evivv.store.mapper" />
       <recent name="com.evivv.store.clients" />
       <recent name="com.evivv.store.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.evivv.store.entity" />
       <recent name="com.evivv.store.util" />
       <recent name="com.evivv.store.service.ex" />
-      <recent name="com.evivv.store.entity" />
       <recent name="com.evivv.store.config" />
       <recent name="com.evivv.store.controller" />
     </key>
@@ -235,15 +143,76 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="NginxApplication" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SeckillServiceImplTest.addSeckillProducts">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillProductServiceImplTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-products-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evivv.store.service.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evivv.store.service.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.evivv.store.service.Impl.SeckillProductServiceImplTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillProductServiceImplTest.getInfoById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-products-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evivv.store.service.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evivv.store.service.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.evivv.store.service.Impl.SeckillProductServiceImplTest" />
+      <option name="METHOD_NAME" value="getInfoById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillProductServiceImplTest.getSeckillList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-products-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evivv.store.service.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evivv.store.service.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.evivv.store.service.Impl.SeckillProductServiceImplTest" />
+      <option name="METHOD_NAME" value="getSeckillList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -264,71 +233,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeckillServiceImplTest.createSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloud-seckill-8004" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.evivv.store.service.Impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.evivv.store.service.Impl" />
-      <option name="MAIN_CLASS_NAME" value="com.evivv.store.service.Impl.SeckillServiceImplTest" />
-      <option name="METHOD_NAME" value="createSeckill" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeckillServiceTest.createSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloud-seckill-8004" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.evivv.store.service.Impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.evivv.store.service.Impl" />
-      <option name="MAIN_CLASS_NAME" value="com.evivv.store.service.Impl.SeckillServiceTest" />
-      <option name="METHOD_NAME" value="createSeckill" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-admin-8002" />
+    <configuration name="NginxApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-nignx-80" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.evivv.store.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.evivv.store.AdminApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeckillApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-seckill-8004" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.evivv.store.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.evivv.store.SeckillApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.evivv.store.NginxApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AdminApplication" />
-        <item itemvalue="Spring Boot.SeckillApplication" />
-        <item itemvalue="JUnit.SeckillServiceImplTest.createSeckill" />
         <item itemvalue="JUnit.SeckillServiceImplTest.addSeckillProducts" />
-        <item itemvalue="JUnit.SeckillServiceTest.createSeckill" />
+        <item itemvalue="Spring Boot.NginxApplication" />
+        <item itemvalue="JUnit.SeckillProductServiceImplTest.getAll" />
+        <item itemvalue="JUnit.SeckillProductServiceImplTest.getInfoById" />
+        <item itemvalue="JUnit.SeckillProductServiceImplTest.getSeckillList" />
       </list>
     </recent_temporary>
   </component>
@@ -346,7 +270,8 @@
       <workItem from="1650356307923" duration="19613000" />
       <workItem from="1650429616018" duration="14233000" />
       <workItem from="1650516904390" duration="3810000" />
-      <workItem from="1650524296972" duration="20807000" />
+      <workItem from="1650524296972" duration="21048000" />
+      <workItem from="1650598693481" duration="11806000" />
     </task>
     <task id="LOCAL-00001" summary="redis存储用户信息用于登陆校验">
       <created>1650298232697</created>
@@ -376,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650391759320</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="基本功能完成">
+      <created>1650565006635</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650565006635</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +331,7 @@
     <MESSAGE value="完成用户信息模块" />
     <MESSAGE value="请求中获得cookie并添加到seckill方法参数，在seckill方法feign调用中将cookie添加到请求头" />
     <MESSAGE value="完成秒杀压测" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成秒杀压测" />
+    <MESSAGE value="基本功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本功能完成" />
   </component>
 </project>

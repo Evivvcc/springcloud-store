@@ -3,6 +3,7 @@ package com.evivv.store.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.evivv.store.entity.SeckillOrder;
+import com.evivv.store.entity.SeckillProduct;
 
 import java.util.List;
 
@@ -24,5 +25,5 @@ public interface ISeckillService extends IService<SeckillOrder> {
      * @param products  秒杀的商品数据在秒杀商品表中的id列表
      * @return 成功创建的订单数据
      */
-    void addSeckillProducts(List<Integer> products);
+    void addSeckillProducts(List<SeckillProduct> products);
 }

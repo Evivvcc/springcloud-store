@@ -6,6 +6,7 @@ import com.evivv.store.clients.UserClient;
 import com.evivv.store.entity.Product;
 import com.evivv.store.entity.SeckillMessage;
 import com.evivv.store.entity.SeckillOrder;
+import com.evivv.store.entity.SeckillProduct;
 import com.evivv.store.mapper.SeckillMapper;
 import com.evivv.store.service.ISeckillService;
 import com.evivv.store.service.ex.DuplicateSeckillException;
@@ -26,11 +27,7 @@ import java.util.List;
 public class SeckillServiceImpl extends ServiceImpl<SeckillMapper, SeckillOrder> implements ISeckillService {
 
 
-    @Autowired
-    private UserClient userClient;
 
-    @Autowired
-    private ProductsClient productsClient;
 
     @Autowired
     RedisIdWorker redisIdWorker;
@@ -83,17 +80,14 @@ public class SeckillServiceImpl extends ServiceImpl<SeckillMapper, SeckillOrder>
     /**
      * 添加秒杀商品库存到redis，进行库存预热
      *
-     * @param products 秒杀的商品数据在秒杀商品表中的id列表
+     * @param list 秒杀的商品列表
      * @return 成功创建的订单数据
      */
     @Override
-    public void addSeckillProducts(List<Integer> products) {
-        for (Integer pid : products) {
-            // 获取商品信息
-            Product byId = productsClient.getInfoById(pid);
-            Integer num = byId.getNum();
+    public void addSeckillProducts(List<SeckillProduct> list) {
+        for (SeckillProduct product : list) {
             // 保存秒杀库存到Redis
-            stringRedisTemplate.opsForValue().set(RedisConstant.SECKILL_STOCK_KEY + pid, num.toString());
+            stringRedisTemplate.opsForValue().set(RedisConstant.SECKILL_STOCK_KEY + product.getSpid(), product.getNum().toString());
         }
     }
 

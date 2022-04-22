@@ -145,7 +145,7 @@
         console.log($("#form-reg").serialize());
         //发送ajax的异步请求来完成用户的注册功能
         $.ajax({
-            url: "http://localhost:10010/users/reg",
+            url: "http://localhost:10010/admin/users/reg",
             type: "POST",
             data: $("#form-reg").serialize(),// 选择表单，自动将表单数据序列化成 username=username&password=password
             dataType: "json",

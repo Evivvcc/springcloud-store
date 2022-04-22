@@ -3,6 +3,7 @@ package com.evivv.store.controller;
 
 import com.evivv.store.entity.Product;
 import com.evivv.store.service.IProductService;
+import com.evivv.store.service.ISeckillProductService;
 import com.evivv.store.util.JsonResult;
 import com.evivv.store.vo.ProductVO;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -17,6 +18,8 @@ public class ProductController extends BaseController {
 
     @Autowired
     IProductService productService;
+    @Autowired
+    ISeckillProductService seckillProductService;
 
     @GetMapping("/hot_list")
     public JsonResult<List<Product>> getHotList() {
@@ -28,12 +31,7 @@ public class ProductController extends BaseController {
         return new JsonResult<ProductVO>(OK, productService.getInfoById(pid));
     }
 
-    @GetMapping("/seckill_list")
-    public JsonResult<List<Product>> getSeckillList() {
-        List<Product> seckillList = productService.getSeckillList();
-        // 将秒杀商品信息添加进缓存
-        return new JsonResult<List<Product>>(OK, seckillList);
-    }
+
 
     /**
      * 更新库存
@@ -52,7 +50,6 @@ public class ProductController extends BaseController {
     /**
      * -------------------- 服务接口 --------------------
      */
-
 
     /**
      * 服务接口，根据pid提供商品信息

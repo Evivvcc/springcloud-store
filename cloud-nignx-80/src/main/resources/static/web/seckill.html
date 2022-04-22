@@ -297,11 +297,11 @@
 		<!--页脚结束-->
 		<script type="text/javascript" src="../js/jquery-getUrlParam.js"></script>
 		<script type="text/javascript">
-			let pid = $.getUrlParam("pid");
+			let spid = $.getUrlParam("spid");
 			// console.log("pid=" + pid);
 			$(document).ready(function() {
 				$.ajax({
-					url: "http://localhost:10010/products/" + pid + "/details",
+					url: "http://localhost:10010/products/seckill_products/" + spid + "/details",
 					type: "GET",
 					dataType: "JSON",
 					xhrFields:{
@@ -331,7 +331,7 @@
 				$.ajax({
 					url: "http://localhost:10010/seckill/create",
 					data: {
-						"pid": pid
+						"spid": spid
 					},
 					type: "POST",
 					dataType: "JSON",

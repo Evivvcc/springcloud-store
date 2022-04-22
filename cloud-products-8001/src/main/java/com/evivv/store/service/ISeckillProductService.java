@@ -2,22 +2,13 @@ package com.evivv.store.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.evivv.store.entity.Product;
+import com.evivv.store.entity.SeckillProduct;
 import com.evivv.store.vo.ProductVO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.List;
 
-/**
- * 处理商品数据的业务层接口
- */
-public interface IProductService extends IService<Product> {
-    /**
-     * 查询热销商品的前四名
-     *
-     * @return 热销商品前四名的集合
-     */
-    List<Product> getHotList();
-
+public interface ISeckillProductService extends IService<SeckillProduct> {
     /**
      * 根据商品id查询商品详情
      *
@@ -26,6 +17,12 @@ public interface IProductService extends IService<Product> {
      */
     ProductVO getInfoById(Integer id) throws JsonProcessingException;
 
+    /**
+     * 查询秒杀商品的前四名
+     *
+     * @return 热销商品前四名的集合
+     */
+    List<SeckillProduct> getSeckillList();
 
     /**
      * 更新库存

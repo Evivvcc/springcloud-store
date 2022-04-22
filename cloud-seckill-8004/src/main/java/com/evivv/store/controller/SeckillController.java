@@ -22,9 +22,9 @@ public class SeckillController extends BaseController {
 
 
     @RequestMapping("create")
-    public JsonResult<Long> create(Integer pid, @CookieValue("userTicket") String ticket) {
+    public JsonResult<Long> create(Integer spid, @CookieValue("userTicket") String ticket) {
         User user = (User) redisTemplate.opsForValue().get("user:" + ticket);
-       Long orderId = seckillService.createSeckill(pid, user.getUid());
+        Long orderId = seckillService.createSeckill(spid, user.getUid());
         return new JsonResult<Long>(OK, orderId);
     }
 

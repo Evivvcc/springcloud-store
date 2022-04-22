@@ -290,7 +290,7 @@
 		<script type="text/javascript">
 			$("#btn-add-new-address").click(function() {
 				$.ajax({
-					url: "http://localhost:10010/users/addresses/add_new_address",
+					url: "http://localhost:10010/admin/addresses/add_new_address",
 					type: "POST",
 					data: $("#form-add-new-address").serialize(),
 					dataType: "JSON",
@@ -324,7 +324,7 @@
 			function showProvinceList() {
 				$("#province-list").append(defaultOption);
 				$.ajax({
-					url: "http://localhost:10010/users/districts",
+					url: "http://localhost:10010/admin/districts",
 					type: "GET",
 					data: "parent=86",
 					dataType: "JSON",
@@ -363,7 +363,7 @@
 				}
 
 				$.ajax({
-					url: "http://localhost:10010/users/districts",
+					url: "http://localhost:10010/admin/districts",
 					type: "GET",
 					data: "parent=" + parent,
 					dataType: "JSON",
@@ -398,7 +398,7 @@
 				}
 
 				$.ajax({
-					url: "http://localhost:10010/users/districts",
+					url: "http://localhost:10010/admin/districts",
 					type: "GET",
 					data: "parent=" + parent,
 					dataType: "JSON",

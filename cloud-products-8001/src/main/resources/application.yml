@@ -6,9 +6,9 @@ spring:
     name: cloud-products-service
   cloud:
     nacos:
-      server-addr: localhost:8848
+      server-addr: 81.69.173.67:8848
   datasource:
-    url: jdbc:mysql://localhost:3306/store
+    url: jdbc:mysql://81.69.173.67:3306/store
     username: root
     password: evivv
     driver-class-name: com.mysql.cj.jdbc.Driver  #MySQL8.0后
@@ -41,6 +41,7 @@ spring:
     timeout: 10000ms #服务器地址
     host: 127.0.0.1 #服务器端口
     port: 6379 #数据库
+    password: evivv
     database: 0
     lettuce:
       pool:

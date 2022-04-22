@@ -299,7 +299,7 @@
 			function showHotList() {
 				$("#seckill-list").empty();
 				$.ajax({
-					url: "http://localhost:10010/products/seckill_list",
+					url: "http://localhost:10010/products/seckill_products/seckill_list",
 					type: "GET",
 					dataType: "JSON",
 					xhrFields:{
@@ -311,12 +311,12 @@
 						for (let i = 0; i < list.length; i++) {
 							console.log(list[i].title);
 							let html = '<div class="col-md-12">'
-									+ '<div class="col-md-7 text-row-2"><a href="seckill.html?pid=#{pid}">#{title}</a></div>'
+									+ '<div class="col-md-7 text-row-2"><a href="seckill.html?spid=#{spid}">#{title}</a></div>'
 									+ '<div class="col-md-2">¥#{price}</div>'
 									+ '<div class="col-md-3"><img src="..#{image}collect.png" class="img-responsive" /></div>'
 									+ '</div>';
 
-							html = html.replace(/#{pid}/g, list[i].pid);
+							html = html.replace(/#{spid}/g, list[i].spid);
 							html = html.replace(/#{title}/g, list[i].title);
 							html = html.replace(/#{price}/g, list[i].price);
 							html = html.replace(/#{image}/g, list[i].image);

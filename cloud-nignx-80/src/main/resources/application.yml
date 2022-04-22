@@ -6,7 +6,7 @@ spring:
     name: cloud-nginx-service
   cloud:
     nacos:
-      server-addr: localhost:8848
+      server-addr: 81.69.173.67:8848
 
 
 
